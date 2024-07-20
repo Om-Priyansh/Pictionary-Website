@@ -23,7 +23,8 @@ function getRandomWord() {
 
 // routes
 app.get("/", (req,res) => {
-    res.send("Server");
+    // res.send("Server");
+    return res.status(234).send("HEloooo");
 });
 
 const ROUND_DURATION = 60; // in seconds
