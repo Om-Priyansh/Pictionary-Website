@@ -9,7 +9,7 @@ import RoomPage from './pages/RoomPage';
 import io from "socket.io-client";
 import { useEffect, useState } from 'react';
 
-const server = "http://pictionary-website-server.vercel.app/";
+const server = "https://pictionary-website-server.vercel.app/";
 const connectionOptions = {
   "force new connection":true,
   reconnectionAttempts: "Infinity",
