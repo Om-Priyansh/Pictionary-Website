@@ -29,6 +29,15 @@ app.get("/", (req,res) => {
 
 const ROUND_DURATION = 60; // in seconds
 
+// Serve static files from the frontend build directory
+// app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+// routes
+// app.get("/", (req, res) => {
+//   res.send("hey");
+// });
+
+
 let roomIdGlobal ,imgURLGlobal;
 
 io.on("connection", (socket) => {
