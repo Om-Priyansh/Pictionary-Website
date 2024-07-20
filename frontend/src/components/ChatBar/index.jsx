@@ -61,7 +61,7 @@ const Chat = ({user,socket, setColorUser, colorUser, word, wordToGuess}) => {
         <form onSubmit={handleSubmit} className="w-100 mt-5 d-flex text-white rounded-3">
             <input type ="text" placeholder="Enter Message" className="h-100 border-0 text-white"
             style= {{
-                "background-color":"transparent",
+                "background":"transparent",
                 width:"90%",
             }} 
             value={message}
