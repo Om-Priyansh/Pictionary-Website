@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import "./index.css";
+
 const CreateRoomForm = ({uuid, socket, setUser}) =>{
 
     const[roomId, setRoomId] = useState(uuid());
@@ -61,7 +63,16 @@ const CreateRoomForm = ({uuid, socket, setUser}) =>{
     return(
         <form className="form col-md-12 mt-5">
             <div className="form-group">
-            <input type = "text" className="form-control my-2" placeholder="Enter your Name" value = {name} onChange={ (e) => setName(e.target.value)}></input>
+            <input type = "text" className="inputText form-control my-2" placeholder="Enter your Name" value = {name} onChange={ (e) => setName(e.target.value)}
+                                style={{background:"transparent",
+                                    border:"none",
+                                    outline:"none",
+                                    border: "2px solid black",
+                                    borderRadius:"10px",
+                                    color:"white"
+                                
+                                }} 
+                                ></input>
             </div>
             <div className="form-group">
                 
@@ -72,10 +83,18 @@ const CreateRoomForm = ({uuid, socket, setUser}) =>{
                     <button className="btn btn-outline-danger btn-sm" type = "button">Copy</button>
                 </div>
                 <div className="input-group d-flex">
-                    <input type = "text" className="form-control my-2" disabled placeholder="Room Code Appears Here" value = {roomId}></input>
+                    <input type = "text" className="inputText form-control my-2" disabled placeholder="Room Code Appears Here" value = {roomId}
+                    style={{background:"transparent",
+                        border:"none",
+                        outline:"none",
+                        border: "2px solid black",
+                        borderRadius:"10px",
+                        color:"white"
+                    }} 
+                    />
                 </div>
             </div>
-        <button type = "submit" onClick={handleCreateRoom} className="mt-4 btn-primary btn-block form-control">Generate Room</button>
+        <button type = "submit" onClick={handleCreateRoom} className="mt-4 btn-primary btn-block form-control btn">Generate Room</button>
         </form>
     );
 };

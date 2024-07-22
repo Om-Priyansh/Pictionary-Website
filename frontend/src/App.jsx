@@ -9,7 +9,7 @@ import RoomPage from './pages/RoomPage';
 import io from "socket.io-client";
 import { useEffect, useState } from 'react';
 
-const server = "http://pictionary-website-server.vercel.app/";
+const server = "http://localhost:3000";
 const connectionOptions = {
   "force new connection":true,
   reconnectionAttempts: "Infinity",
@@ -103,7 +103,7 @@ const App = () =>{
     );
   }
   return(
-    <div>
+    <div className='mainDiv'>
       <ToastContainer />
       <Routes>
         <Route path = "/" element = {<Forms uuid = {uuid} socket = {socket} setUser = {setUser} />} />

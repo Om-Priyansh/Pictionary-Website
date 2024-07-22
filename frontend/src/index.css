@@ -1,0 +1,12 @@
+html, body, #root{
+    width: 100%;
+    height: 100%;
+}
+
+#root{
+    /* background: black; */
+    background: linear-gradient(to left,#de6161, #2657eb);
+    overflow: hidden;
+    /* background: rgb(255,255,255); */
+/* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(241,246,252,1) 38%, rgba(148,187,233,1) 100%); */
+}

@@ -11,10 +11,14 @@ const RoomPage = ({user, socket, users, word,wordToGuess}) => {
     const canvasRef = useRef(null);
     const ctxRef = useRef(null);
 
+    
+
     // console.log(word);
 
     const [tool, setTool] = useState("pencil");
-    const [color, setColor] = useState("black");
+    const [color, setColor] = useState("#000000");
+    
+
     const [elements, setElements] = useState([]);
     const [history, setHistory] = useState([]);
 
@@ -104,9 +108,13 @@ const RoomPage = ({user, socket, users, word,wordToGuess}) => {
         user.presenter = true;
         console.log(user);
     };
+
+    // const canvas = canvasRef.current;
+    // const ctx = canvas.getContext("2d");
+    // ctx.fillRect = "white";
     
     return (
-        <div className="row">
+        <div className="row-mid">
             
             <h1 className="text-center py-2">Pictionary App <span className="text-primary">[Players Playing : {users.length}]</span></h1>
             {/* <div className="col-md-12 gap-3 px-5 mt-4 mb-5 d-flex align-items-center justify-content-around"> */}

@@ -7,6 +7,10 @@ const WhiteBoard = ({canvasRef, ctxRef, elements, setElements, color, user, sock
     
 
     const[img,setImg] = useState(null);
+    
+    // const canvas = canvasRef.current;
+    // const ctx = canvas.getContext("2d");
+    // ctx.fillRect = "white";
 
 
 useEffect(()=>{
@@ -138,7 +142,7 @@ const [isDrawing, setIsDrawing] = useState(false);
     onMouseUp={handleMouseUp}
     className="border border-dark  w-100 overflow-hidden">
     
-    <canvas ref = {canvasRef} />
+    <canvas ref = {canvasRef} id = "myCanvas"/>
     
     </div>
     )

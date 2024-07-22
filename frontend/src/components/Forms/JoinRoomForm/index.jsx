@@ -21,11 +21,25 @@ const JoinRoomForm = ({uuid, socket, setUser}) =>{
     return(
         <form className="form col-md-12 mt-5">
             <div className="form-group">
-            <input type = "text" className="form-control my-2" placeholder="Enter your Name" value = {name} onChange={(e) => setName(e.target.value)}></input>
-            <input type = "text" className="form-control my-2" placeholder="Enter Room Code" value = {roomId} onChange={(e) => setRoomId(e.target.value)}></input>
+            <input type = "text" className="form-control my-2" placeholder="Enter your Name" value = {name} onChange={(e) => setName(e.target.value)}
+                                style={{background:"transparent",
+                                    border:"none",
+                                    outline:"none",
+                                    border: "2px solid black",
+                                    borderRadius:"10px",
+                                    color:"white"
+                                }} ></input>
+            <input type = "text" className="form-control my-2" placeholder="Enter Room Code" value = {roomId} onChange={(e) => setRoomId(e.target.value)}
+            style={{background:"transparent",
+                border:"none",
+                outline:"none",
+                border: "2px solid black",
+                borderRadius:"10px",
+                color:"white"
+            }} ></input>
             </div>
 
-        <button type = "submit" className="mt-4 btn-primary btn-block form-control" onClick={handleRoomJoin}>Join Room</button>
+        <button type = "submit" className="mt-4 btn-primary btn-block form-control btn" onClick={handleRoomJoin}>Join Room</button>
         </form>
     );
 };
